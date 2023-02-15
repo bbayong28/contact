@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./Header";
 import AddContact from "./AddContact";
 import ContactList from "./ContactList";
+import ContactDetail from "./ContactDetail";
 
 
 
@@ -14,22 +15,8 @@ function App() {
     JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) ?? []
   );
 
-  //const contacts = [
-  //  {
-  //    id : "1",
-  //    name: 'Jhon',
-  //    email : 'Jhon123@gmail.com',
-  //  },
-  //  {
-  //    id : "2",
-  //    name: 'Tom',
-  //    email : 'Tom5656@gmail.com',
-  //  }
-  //]
-
   const addContactHandler = (contact) => {
     console.log(contact)
-    //setContacts([...contacts, contact])
     setContacts([...contacts, { id : uuid(), ...contact }])
   };
 
@@ -41,6 +28,7 @@ function App() {
     })
     setContacts(newContactList);
   }
+
 
   useEffect(() => { 
     const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
@@ -71,9 +59,8 @@ function App() {
             <AddContact
               addContactHandler={addContactHandler} />
           }
-        />
-        {/* <AddContact addContactHandler={ addContactHandler } />
-        <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}   
+        /> 
+        <Route path="/contact/:id" element={<ContactDetail contacts={contacts} />} />
       </Routes>  
     </div>
   );

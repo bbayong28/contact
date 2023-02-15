@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import ContactList from './ContactList'
 
 const AddContact = ({ addContactHandler }) => {
 
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
-  let navigate = useNavigate()
+  const navigate = useNavigate()
   //state = {
   //  name: "",
   //  email:"",
   //}
 
 
-  function add (e) { 
+  const add = (e) => { 
     e.preventDefault();
     if (name === '' && email === '') { 
       alert("All the fields are mandatory!");
@@ -22,7 +23,9 @@ const AddContact = ({ addContactHandler }) => {
     //this.props.addContactHandler(this.state)
     //this.useState({name:'', email:''})
     addContactHandler({ name, email });
-    navigate('/');
+    setEmail("");
+    setName("");
+    navigate("/");
     
   }
   return (
@@ -50,9 +53,7 @@ const AddContact = ({ addContactHandler }) => {
             value={email}
             onChange={(e) => { setEmail(e.target.value) }} />
         </div>
-        <button className='ui button blue'>Add</button>
-        
-
+        <button className='ui button blue'>Add</button>     
       </form>
     </div>
   )
