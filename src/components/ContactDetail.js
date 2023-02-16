@@ -22,6 +22,13 @@ const ContactDetail = ({contacts}) => {
           <div className='descriptions'>{v.email}</div> 
         </div>
       </div>
+      <div className="center-div">
+        <Link to="/">
+          <button className="ui button blue center">
+            Back to Contact List
+          </button>
+        </Link>
+      </div>
     </div>
   )
 }

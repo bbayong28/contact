@@ -1,12 +1,7 @@
-# Contact_manager
+### contact_step01
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 이메일 매니저 기본
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 이름, 이메일 목록 추가 기능
+- 추가된 정보 localStorage에 저장 기능
+- 추가된 정보목록, 정보디테일 화면으로 이동 기능
