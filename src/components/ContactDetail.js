@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
-import user from '../images/user.jpg'
 
 const ContactDetail = ({contacts}) => {
 
@@ -15,7 +14,7 @@ const ContactDetail = ({contacts}) => {
     <div className='main'>
       <div className='ui card centered'>
         <div className="image">
-          <img src={user} alt="user" />
+          <img src={process.env.PUBLIC_URL + "/assets/img/user.jpg"} alt="user" />
         </div>
         <div className='content'>
           <div className='header'>{v.name}</div>

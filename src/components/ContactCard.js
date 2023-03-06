@@ -1,5 +1,4 @@
 import React from 'react'
-import user from '../images/user.png'
 import { Link } from 'react-router-dom';
 
 const ContactCard = (props) => {
@@ -8,7 +7,7 @@ const ContactCard = (props) => {
 
   return (
     <div className="item">
-      <img className='ui avatar image' src={user} alt='user'/>
+      <img className='ui avatar image' src={process.env.PUBLIC_URL + "/assets/img/user.png"} alt='user'/>
       <div className='content'>
         <Link to={{pathname:`/contact/${id}`, state:{contact: props.contact}}}>
           <div className='header'>{name}</div>

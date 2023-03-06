@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import "./App.css";
-import Header from "./Header";
-import AddContact from "./AddContact";
-import ContactList from "./ContactList";
-import ContactDetail from "./ContactDetail";
+import Header from "./components/Header";
+import AddContact from "./components/AddContact";
+import ContactList from "./components/ContactList";
+import ContactDetail from "./components/ContactDetail";
 
 
 
